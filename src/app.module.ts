@@ -9,7 +9,7 @@ import { GroupModule } from './group/group.module';
   imports: [
     TypeOrmModule.forRoot({
       type: 'postgres',
-      url: 'postgresql://neondb_owner:npg_MVW5dkcmC6TR@ep-lucky-frost-a43r9d2v-pooler.us-east-1.aws.neon.tech/neondb?sslmode=require',
+      url: process.env.DATABASE_URL,
       autoLoadEntities: true,
       synchronize: true,
     }),
