@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { CustomersModule } from './customers/customers.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { GroupModule } from './group/group.module';
+import { WhatsappModule } from './whatsapp/whatsapp.module';
 
 @Module({
   imports: [
@@ -15,6 +16,7 @@ import { GroupModule } from './group/group.module';
     }),
     CustomersModule,
     GroupModule,
+    WhatsappModule,
   ],
   controllers: [AppController],
   providers: [AppService],
