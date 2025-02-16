@@ -30,6 +30,11 @@ export class CustomersController {
     return this.customerService.findOne(id);
   }
 
+  @Get('group/:groupId')
+  findByGroupId(@Param('groupId') groupId: string) {
+    return this.customerService.findCustomersByGroup(groupId);
+  }
+
   @Patch(':id')
   update(
     @Param('id') id: string,
