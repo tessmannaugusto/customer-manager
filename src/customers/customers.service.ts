@@ -25,6 +25,10 @@ export class CustomersService {
     return await this.customerRepository.findOne({ where: { id } });
   }
 
+  async findCustomersByGroup(groupId: string): Promise<Customer[]> {
+    return await this.customerRepository.find({ where: { group: groupId } });
+  }
+
   async update(
     id: string,
     updateCustomerDto: UpdateCustomerDto,

@@ -10,6 +10,6 @@ export class WhatsAppConfig {
   }
 
   get accessToken(): string {
-    return this.configService.get('WHATSAPP_ACCESS_TOKEN');
+    return this.configService.get('WHATSAPP_ACCESS_TOKEN') || '';
   }
 }
