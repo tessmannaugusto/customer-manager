@@ -17,7 +17,7 @@ export class Customer {
   @Column({ length: 14, unique: true })
   cpf_cnpj: string;
 
-  @Column({ length: 20 })
+  @Column({ length: 20, unique: true })
   contact: string;
 
   @Column({ length: 50 })
